@@ -1,0 +1,321 @@
+@charset "utf-8";
+
+/*-------------
+表示メニ用ュー css
+---------------*/
+/* 最小幅820px固定 */
+.vewWrapper {
+  width: max(100%, 820px);
+  background: #D4D568 url(../image/vew_bg.svg) top left no-repeat;
+}
+
+.vewHeader,
+.vewMain {
+  width: clamp(820px, 100%, 1024px);
+  padding: 0 12px;
+  margin: 0 auto;
+}
+
+.vewH1 {
+  margin: 0;
+  color: #335C49;
+  font-size: 1.6rem;
+  padding: 12px;
+  font-weight: 400;
+}
+
+.topImg {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.titleImg {
+  position: absolute;
+  bottom: -50px;
+  left: calc((100% - 460px) / 2);
+}
+
+/*---------- カテゴリ menu----------*/
+.vewCattab {
+  padding-top: 20px;
+  display: grid;
+  width: min(94%, 860px);
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 15px;
+  justify-self: center;
+}
+
+.vewCattab li {
+  line-height: 50px;
+  background: #658B3D;
+  text-align: center;
+  color: #fff;
+  /* font-size: 1.8rem; */
+  font-weight: 500;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+}
+
+.vewCattab .act {
+  background: #fff;
+  color: #658B3D;
+}
+
+/*---------- メニューリスト-------*/
+.menuContainer {
+  width: 100%;
+  background: #fff;
+  padding: 50px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+.vewMenu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 26px;
+  justify-self: center;
+  width: 100%;
+}
+
+.active {
+  display: block;
+}
+
+.noActive {
+  display: none;
+}
+
+.menuBox {
+  position: relative;
+  width: min(100%, 280px);
+  cursor: pointer;
+}
+
+.menuName {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  line-height: 36px;
+  background: #335C49;
+  color: #fff;
+  font-size: 1.6rem;
+  padding-left: 10px;
+  width: 100%;
+}
+
+.pickUp {
+  position: absolute;
+  top: 44px;
+  left: 10px;
+}
+
+.vewPrice {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  /* background: rgba(255, 255, 255, 0.7); */
+  /* width: 156px; */
+  text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF,
+    -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+    0px 1px 0 #FFF, 0-1px 0 #FFF,
+    -1px 0 0 #FFF, 1px 0 0 #FFF;
+  /* 線の色と太さ(1px) */
+  line-height: 1.2;
+  padding-bottom: 5px;
+  padding-left: 2px;
+}
+
+.vewPrice span {
+  font-size: 12px;
+}
+
+.order_btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.subMenu {
+  color: #658B3D;
+  font-size: 2.4rem;
+  border-bottom: solid 2px #D4D568;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.subMenu span {
+  color: #D4D568;
+  font-size: 4.8rem;
+  padding-right: 16px;
+}
+
+#mainCat h2 {
+  margin-top: 0 0 30px 0;
+}
+
+
+/*--------------------
+モーダル
+--------------------*/
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  display: none;
+}
+
+.orderList,
+.cashList,
+.thanks {
+  width: 700px;
+  padding: 50px 60px;
+  background: #fff;
+  border-radius: 10px;
+  position: fixed;
+  top: 5vh;
+  left: calc((100% - 700px) / 2);
+  height: calc(100vh - 10vh);
+  overflow-y: auto;
+  display: none;
+}
+
+.orderTitle {
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  color: #658B3D;
+  margin: 0 0 20px 0;
+}
+
+.notes {
+  text-align: center;
+}
+
+.orderBox {
+  margin: 40px 0;
+}
+
+.cashBox {
+  margin-top: 40px;
+}
+
+.orderBox li,
+.cashBox li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: solid 1px #D4D568;
+}
+
+.menuItem {
+  font-size: 1.8rem;
+}
+
+.onePrice {
+  padding-left: 4px;
+}
+
+.taxPrice {
+  font-size: 1.4rem;
+}
+
+.numBox input[type="number"] {
+  display: inline-block;
+  width: 4rem;
+  height: 30px;
+  padding-left: 6px;
+  border: solid 1px #ccc;
+  border-radius: 6px;
+  margin-right: 4px;
+}
+
+.thanksText {
+  margin: 40px 0;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.cashiers,
+.toMenu {
+  width: 200px;
+  line-height: 40px;
+  text-align: center;
+  margin: 20px auto;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cashBox p {
+  font-size: 1.8rem;
+}
+
+.total {
+  text-align: right;
+  margin: 10px 0 40px 0;
+  border-bottom: solid 2px #D4D568;
+  font-size: 1.8rem;
+  padding-bottom: 10px;
+}
+
+.lastTotal {
+  font-size: 2.4rem;
+}
+
+.cashiers {
+  background: #DD4747 url(../image/wh_arrow.svg) 94% center no-repeat;
+  background-size: 8px;
+}
+
+.cashiers a {
+  color: #fff;
+}
+
+.toMenu {
+  background: #658B3D url(../image/wh_arrow.svg) 94% center no-repeat;
+  background-size: 8px;
+}
+
+/*---------- 制作環境と仕様について ----------*/
+.explanation {
+  margin: 80px 0 20px 0;
+}
+
+.explanTitle {
+  color: #335C49;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+  padding-bottom: 6px;
+  border-bottom: solid 1px #658B3D;
+}
+
+.explanText {
+  margin-top: 20px;
+}
+
+.link {
+  margin-top: 30px;
+}
+
+.link a {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.small {
+	font-size: 80%;
+}

@@ -1,0 +1,34 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: xxxxxxxxx #任意のコンテナ名
+    restart: "no"
+    environment:
+      MYSQL_ROOT_PASSWORD: "root パスワード"
+      MYSQL_DATABASE: xxxxxxxxx #ZAMMPで作っておいたDB名
+      MYSQL_USER: "user name" #任意のユーザーネーム
+      MYSQL_PASSWORD: "user password" #任意のパスワード
+
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+      # 追加：初期化SQLファイルをコンテナ内の特別なフォルダーに紐付け
+      - ./menu_table.sql:/docker-entrypoint-initdb.d/xxxxxxxxx.sql
+
+  # Webアプリケーションコンテナ（現在は不要のため完全にコメントアウト）
+  # web:
+  #   build: .
+  #   container_name: xxxxxxxxxx
+  #   ports:
+  #     - "8080:8080"
+  #   environment:
+  #      # コンテナ内の保存用ディレクトリを指定
+  #     - UPLOAD_DIR=/app/upload
+  #      # 追加（Docker内では db コンテナを参照する）
+  #     - DB_HOST=db
+  #   volumes:
+  #      # ホスト側の ./uploaded フォルダをコンテナ内にマウント（データ永続化）
+  #     - ./src/main/webapp/upload:/app/upload
+  #   depends_on:
+  #     - db
