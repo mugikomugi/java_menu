@@ -240,10 +240,10 @@
             	<li>Mac OS14</li>
             </ul>
             </div>
-          <p class="mb20">更新日：2026年００月００日</p>
+          <p class="mb20">更新日：2026年 9月25日</p>
           <p class="link">
-            <a href="#"><img src="${pageContext.request.contextPath}/image/github.svg" alt="Git hub"></a>
-            <a href="#"><img src="${pageContext.request.contextPath}/image/qiita.svg" alt="Qiita"></a>
+            <a href="https://github.com/mugikomugi/java_menu" target="_blank"><img src="${pageContext.request.contextPath}/image/github.svg" alt="Git hub"></a>
+            <a href="https://qiita.com/drafts/b034ea47fd56451ae5b9" target="_blank"><img src="${pageContext.request.contextPath}/image/qiita.svg" alt="Qiita"></a>
           </p>
         </div>
       </section>

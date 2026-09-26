@@ -29,7 +29,7 @@
     </p>
   </div>
   <div class="editBtn">
-    <p class="edit"><a href="${pageContext.request.contextPath}/dashboard/edit?id=${ item.id }">編集する</a></p>
-    <p class="delete"><a href="${pageContext.request.contextPath}/dashboard/delete?id=${ item.id }">削除</a></p>
+    <p class="edit"><a href="${pageContext.request.contextPath}/dashboard/edit?id=<c:out value="${ item.id }" />">編集する</a></p>
+    <p class="delete"><a href="${pageContext.request.contextPath}/dashboard/delete?id=<c:out value="${ item.id }" />">削除</a></p>
   </div>
 </li>
