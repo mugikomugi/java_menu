@@ -58,6 +58,10 @@ main
             └── menuview.tag
 </pre>
 
+## UIデザイン
+Figmaにて作成<br>
+![UIデザイン](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F641189%2F10c7bde6-8409-4147-a965-ec1063cc7189.png?ixlib=rb-4.1.1&auto=format&gif-q=60&q=75&s=27bebdc1ff70d32e02e180514abc2012)
+
 ## 開発環境
 Java17<br>
 Tomcat9<br>
